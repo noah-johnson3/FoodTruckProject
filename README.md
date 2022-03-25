@@ -11,4 +11,3 @@
 * static
 
 # FoodTruckProject
-# FoodTruckProject
