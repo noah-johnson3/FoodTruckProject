@@ -4,33 +4,28 @@ import java.util.Random;
 
 public class FoodTruck {
 
-	private static int nextTruckId;
+	private static int nextTruckId = 100;
+	private int Id;
 	private String truckName;
 	private String foodType;
 	private double rating;
 
-	public String toString() {
-		return "FoodTruck [truckName = " + truckName + ", foodType = " + foodType + ", rating = " + rating + "]";
-	}
+	
 	public FoodTruck() {
 		
 	}
 
-	public FoodTruck(String truckName, String foodType, double rating, int nextTruckId) {
+	public FoodTruck(String truckName, String foodType, double rating) {
 		this.truckName = truckName;
 		this.foodType = foodType;
 		this.rating = rating;
+		this.Id = nextTruckId;
+		nextTruckId++;
 	}
-
-	public static int getNextTruckId() {
-		return nextTruckId;
-	}
-
-	public static void setNextTruckId(int nextTruckId) {
-		Random truckId = new Random();
-		int maxNumber = 1000;
-		int nextTruckID = truckId.nextInt(maxNumber) +1;
-		FoodTruck.nextTruckId = nextTruckId;
+	
+	
+	public int getId() {
+		return Id;
 	}
 
 	public String getTruckName() {
@@ -55,6 +50,11 @@ public class FoodTruck {
 
 	public void setRating(double rating) {
 		this.rating = rating;
+	}
+	
+	public String toString() {
+		return "FoodTruck [truckName = " + truckName + ", foodType = " + foodType + ", rating = " + rating
+				+ " truck ID = " + Id + "]";
 	}
 
 }
