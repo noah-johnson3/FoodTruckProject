@@ -46,17 +46,6 @@ public class FoodTruckApp {
 		}
 	}
 
-	private void greetings() {
-		System.out.println("Hello user please select one of the following options");
-
-	}
-	// TO DO: menu outside of for loop
-	// running the program
-	// greeting method
-	// making the trucks(basically the code above)
-	// method after exiting ( menu method )
-	// goodbye method
-
 	public void makeMenu(Scanner userInput, FoodTruck[] foodTrucks, FoodTruckApp app) {
 
 		int choice = 0;
@@ -97,7 +86,7 @@ public class FoodTruckApp {
 
 				}
 				double average = total / tempValue;
-				System.out.println("the average rating of all food trucks is : " + average);
+				System.out.println("The average rating of all food trucks is : " + average);
 			}
 
 			if (choice == 3) {
@@ -123,10 +112,10 @@ public class FoodTruckApp {
 					}
 
 				}
-				System.out.println("the highest rated Food Truck is : " + bestTruck.toString());
+				System.out.println("The highest rated Food Truck is : " + bestTruck.toString());
 			}
 			if(choice == 4) {
-				System.out.println("goodbye");
+				System.out.println("Goodbye!");
 				break;
 			}
 		}
