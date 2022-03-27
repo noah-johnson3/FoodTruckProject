@@ -25,7 +25,8 @@ public class FoodTruckApp {
 	}
 
 	public void makeTrucks(Scanner kb, FoodTruck[] foodTrucks, FoodTruckApp app) {
-
+		
+		System.out.println("Press quit on the name of food truck question to skip entering info and go to the menu!");
 		for (int index = 0; index < foodTrucks.length; index++) {
 
 			System.out.println("What is the name of the food truck?");
